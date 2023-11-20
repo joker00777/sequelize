@@ -19,6 +19,9 @@ describe('[ABSTRACT]', () => {
           primaryKey: true,
           type: DataTypes.STRING(1),
         },
+        name: {
+          type: DataTypes.TEXT,
+        },
       });
 
       const Player = current.define('player', {
@@ -66,6 +69,7 @@ describe('[ABSTRACT]', () => {
           'players.created': new Date('2017-03-06T15:47:30.000Z'),
           'players.lastModified': new Date('2017-03-06T15:47:30.000Z'),
           'agents.uuid': agentOneUuid,
+          name: 'vansh',
           'agents.id': 'p',
           'agents.name': 'One',
         },
@@ -75,6 +79,7 @@ describe('[ABSTRACT]', () => {
           'players.created': new Date('2017-03-06T15:47:30.000Z'),
           'players.lastModified': new Date('2017-08-22T11:16:44.000Z'),
           'agents.uuid': agentTwoUuid,
+          name: 'joe',
           'agents.id': 'z',
           'agents.name': 'Two',
         },
